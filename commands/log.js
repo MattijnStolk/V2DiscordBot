@@ -1,6 +1,6 @@
 module.exports = function (msg, args) {
     ownUserId = process.env.OWNER;
-    //console.log(msg.client.guilds.get('796103676149628929'))
+    //console.log(msg.client.guilds.get(''))
 
     //index must listen to a member joining
     //when a member joins
