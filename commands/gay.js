@@ -10,18 +10,23 @@ const replies = [
     'I heard they\'re hiring in the red-light district.'
 ]
 
+const optionalReplies = [
+    `<@${process.env.NMEMBER}> wants to eat vlaai of your butt`, 
+    `<@${process.env.TMEMBER}> is looking at you in a very creepy way rn...`
+]
+
 
 
 module.exports = function (msg, args) {
-    if (msg.channel.guild.id === 796103676149628929) {
-        const newReplies = replies.push('<@307203798651371521> wants to eat vlaai of your butt', '<@290498501727748096> is looking at you in a very creepy way rn...')
+    console.log(msg.channel.guild.id);
+    if (msg.channel.guild.id === '796103676149628929') {
+        const newReplies = replies.concat(optionalReplies)
         sendMSG(newReplies)    
     } else {
-        sendMSG(replies.length)
+        sendMSG(replies)
     }
-    function sendMSG(length) {
-        replies.push('<@307203798651371521> wants to eat vlaai of your butt', '<@290498501727748096> is looking at you in a very creepy way rn...')
-        const index = Math.floor(Math.random() * length);
-        msg.channel.send(replies[index]);   
+    function sendMSG(array) {
+        const index = Math.floor(Math.random() * array.length);
+        msg.channel.send(array[index]);   
     }    
 }
