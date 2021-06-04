@@ -1,7 +1,8 @@
-require("dotenv").config();
+require('dotenv').config({path:__dirname+'/.env'})
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 client.login(process.env.DISCORD_TOKEN)
 
 client.on('ready', () => {
@@ -11,9 +12,6 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', (member) => {
     if (member.guild.name == 'Version 2') {
-        console.log(member);
-        console.log(member.user.username, member.user.id);
-        console.log('channel = ' + member.guild.name)
         member.guild.channels.cache.get('796696201067888651').send(`Welcome ${member.user} to the **V2 server!**`)
     }
 })

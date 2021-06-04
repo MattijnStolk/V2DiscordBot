@@ -18,7 +18,6 @@ const optionalReplies = [
 
 
 module.exports = function (msg, args) {
-    console.log(msg.channel.guild.id);
     if (msg.channel.guild.id === '796103676149628929') {
         const newReplies = replies.concat(optionalReplies)
         sendMSG(newReplies)    
