@@ -13,6 +13,7 @@ client.on('ready', () => {
 client.on('guildMemberAdd', (member) => {
     if (member.guild.name == 'Version 2') {
         member.guild.channels.cache.get('796696201067888651').send(`Welcome ${member.user} to the **V2 server!**`)
+        member.send('Hi, welcome to the V2 server. Would you mind picking your roles (as stated in the rules) so we can keep the server organized? Thanks in advance!')
     }
 })
 

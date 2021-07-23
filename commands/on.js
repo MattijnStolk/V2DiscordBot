@@ -9,8 +9,10 @@ module.exports = function (msg, args) {
             sendmsg("Charlie Team")
         } else if(fixedArgs.charAt(1) === 'u') {
             msg.channel.send(`cum`)
+        } else if(fixedArgs.charAt(1) === 'a') {
+            sendmsg("Casual")
         } else {
-            msg.channel.send(`${user} There is 2 roles starting with a c, supply the second letter aswell to make it work!'.`);
+            msg.channel.send(`${user} There is multiple roles starting with a c, supply the second letter aswell to make it work!'.`);
         }
     } else if (fixedArgs.charAt(0) === "f") {
         if(fixedArgs.charAt(1) === 'r'){

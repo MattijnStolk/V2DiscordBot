@@ -11,6 +11,6 @@ module.exports = async function (msg, args) {
         .setImage(image);
         msg.channel.send(embed);
     } else{
-        msg.channel.send('This channel is not NSFW, sorry mate')
+        msg.channel.send('This channel is not NSFW, go be horny somewhere where it is allowed')
     }
 }
