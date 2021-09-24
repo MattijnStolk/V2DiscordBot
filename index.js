@@ -13,13 +13,25 @@ client.on('ready', () => {
 client.on('guildMemberAdd', (member) => {
     if (member.guild.name == 'Version 2') {
         member.guild.channels.cache.get('796696201067888651').send(`Welcome ${member.user} to the **V2 server!**`)
-        member.send('Hi, welcome to the V2 server. Would you mind picking your roles (as stated in the rules) so we can keep the server organized? Thanks in advance!')
+        let rulesChannel = member.guild.channels.cache.get('796697354047979541')
+        let rolesChannel = member.guild.channels.cache.get('796798083429564466')
+        let faqChannel = member.guild.channels.cache.get('868961877596700683')
+        member.send(`Hi, welcome to the V2 server.\nWould you mind picking your ${rolesChannel} (as stated in the ${rulesChannel}) so we can keep the server organized? Thanks in advance!\nFor a list of all the available commands you can check the ${faqChannel} channel. `)
+        setTimeout(() => {
+            const message = member.guild.channels.cache.get('796696201067888651').lastMessage
+            message.react('👋')
+        }, 500)
     }
 })
+
 
 client.on('guildMemberRemove',(member) => {
     if (member.guild.name == 'Version 2') {
         member.guild.channels.cache.get('796696201067888651').send(`**${member.user.username}** has just left the server!`)
+        setTimeout(() => {
+            const message = member.guild.channels.cache.get('796696201067888651').lastMessage
+            message.react('⛔')
+        }, 500)
     }
 })
 
