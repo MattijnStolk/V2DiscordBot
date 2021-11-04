@@ -24,13 +24,12 @@ client.on('guildMemberAdd', (member) => {
     }
 })
 
-
 client.on('guildMemberRemove',(member) => {
     if (member.guild.name == 'Version 2') {
         member.guild.channels.cache.get('796696201067888651').send(`**${member.user.username}** has just left the server!`)
         setTimeout(() => {
             const message = member.guild.channels.cache.get('796696201067888651').lastMessage
-            message.react('⛔')
+            message.react('🇫')
         }, 500)
     }
 })
