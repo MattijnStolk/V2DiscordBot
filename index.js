@@ -34,6 +34,5 @@ client.on('guildMemberRemove',(member) => {
     }
 })
 
-
 let commandHandler = require("./commands");
 client.on('message', commandHandler);

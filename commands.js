@@ -13,10 +13,11 @@ const random = require("./commands/random.js");
 const fbi = require("./commands/fbi.js")
 const communism = require("./commands/communism.js")
 const time = require('./commands/time.js')
+const poo = require('./commands/poo.js')
 
 const commands = { amigay, gif, ppsize, on, pornpic, porn, meme, log, 
                     fourk, insult, amiworthy, random, fbi, communism, 
-                    time, };
+                    time, poo,  };
 module.exports =  async function (msg) {
     let tokens = msg.content.split(" ");
     let command = tokens.shift();

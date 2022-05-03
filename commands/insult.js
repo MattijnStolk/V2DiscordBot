@@ -55,6 +55,7 @@ const insults = [
     'Your mom must have a really loud bark!',
     'Why don\'t you let that hole under your nose heal up?',
     'For those who never forget a face, you are an exception.',
+    'shut up ni-      ce guy'
 ]
 
 module.exports = async function (msg, args) {

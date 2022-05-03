@@ -9,4 +9,3 @@ Then run node index.js and you're good to go!
 
 If you need any help, you can join the V2 server and tag the owner.
 https://discord.gg/eE7ksC7reb
-
