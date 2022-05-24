@@ -29,11 +29,8 @@ module.exports = function (msg, args) {
     if (args.length > 1) {
         keywords = args.join(" ");
     }
-    if (msg.author.id == 339068289546321920) {
-        msg.channel.send('damn matt, I didn\'t know ur pp could be that large')
-    }
-    else{
+    // if (msg.author.id == 339068289546321920) { msg.channel.send('damn matt, I didn\'t know ur pp could be that large')  } else{
         const index = Math.floor(Math.random() * randomReplies.length);
         msg.channel.send(randomReplies[index]);
-    }
+    //}
 }

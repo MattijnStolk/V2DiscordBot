@@ -12,10 +12,9 @@ module.exports = async function (msg, args) {
         msg.channel.send(embed);
     } else{
         const embed = new Discord.MessageEmbed()
-        .setTitle('This channel is not NSFW, go be horny somewhere where it is allowed')
+        .setTitle('This channel is not NSFW, go be horny somewhere else')
         .setColor("BLACK")
         .setImage('https://i.kym-cdn.com/entries/icons/facebook/000/033/758/Screen_Shot_2020-04-28_at_12.21.48_PM.jpg')
         msg.channel.send(embed)
-        //msg.channel.send('This channel is not NSFW, go be horny somewhere else')
     }
 }
